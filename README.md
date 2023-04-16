@@ -83,3 +83,15 @@ order by
 	year_game
 ```
 <image src="https://github.com/ArinichElena/DML_2/blob/main/cte.png">
+	
+#### 5. Используя функцию LAG вывести кол-во очков по всем игрокам за текущий код и за предыдущий.
+```sql
+select
+	player_name,
+	year_game,
+	points,
+	lag(points) over (partition by player_name order by year_game)
+from 
+	public.statistic;	
+```
+<image src="https://github.com/ArinichElena/DML_2/blob/main/lag.png">
