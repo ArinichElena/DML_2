@@ -32,6 +32,7 @@ order by
 	year_game;
 ```
 <image src="https://github.com/ArinichElena/DML_2/blob/main/rollup.png">
+	
 #### 4. Написать cte показывающее тоже самое
 ```sql
 with sum_player as
